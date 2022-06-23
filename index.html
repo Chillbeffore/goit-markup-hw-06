@@ -405,6 +405,18 @@
           </ul>
           </address>
         </div>
+        <div class="subscribe">
+          <strong class="fotter-primary-text">Подпишитесь на рассылку</strong>
+          <form class="fotter-form">
+            <input class="footer-input" type="email" name="foot-mail" placeholder="E-mail" autocomplete="email">
+
+            <button class="footer-sub-btn">Подписаться
+              <svg class="footer-sub-icon" width="24" height="24">
+                <use href="./img/symbol-defs (4).svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </footer>
@@ -425,7 +437,7 @@
         <div class="form-field">
           <label class="form-label" for="name">Имя</label>
 
-          <input class="form-input " type="text" name="name" id="name">
+          <input class="form-input " type="text" name="name" id="name" required minlength="3" autocomplete="name">
           <svg class="input-icon person" width="20" height="20">
             <use href="./img/symbol-defs (4).svg#icon-person-black"></use>
           </svg>
@@ -434,7 +446,7 @@
 
         <div class="form-field">
           <label class="form-label" for="tel">Телефон</label>
-          <input class="form-input" type="tel" name="tel" id="tel">
+          <input class="form-input" type="tel" name="tel" id="tel" required autocomplete="on">
           <svg class="input-icon tel" width="20" height="20">
             <use href="./img/symbol-defs (4).svg#icon-phone-black"></use>
           </svg>
@@ -442,20 +454,20 @@
 
         <div class="form-field">
           <label class="form-label" for="mail">Почта</label>
-          <input class="form-input" type="email" name="mail" id="mail">
+          <input class="form-input" type="email" name="mail" id="mail" required autocomplete="email">
           <svg class="input-icon mail" width="20" height="20">
             <use href="./img/symbol-defs (4).svg#icon-email-black"></use>
           </svg>
         </div>
 
         <div class="form-field">
-          <label class="form-label" for="comment">Коментарий</label>
+          <label class="form-label" for="comment">Коментарий</label required>
           <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
         </div>
 
 
         <label class="checkbox-label">
-          <input class="checkbox" type="checkbox">
+          <input class="checkbox" type="checkbox" required>
           <span class="checkbox-icon"></span>
           <p class="secondary-check-text">
             Соглашаюсь с рассылкой и принимаю
