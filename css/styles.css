@@ -778,6 +778,7 @@ textarea:focus {
 }
 .container.footer {
   display: flex;
+  padding: 0;
 }
 
 .footer .link {
