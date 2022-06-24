@@ -234,6 +234,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  padding: 40px 40px;
 }
 .modal-primary-text {
   font-weight: 700;
@@ -241,7 +242,7 @@ section {
   line-height: calc(23 / 20);
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 40px;
+  margin-top: 0px;
   margin-bottom: 2px;
 }
 
@@ -259,6 +260,14 @@ section {
   border-radius: 50%;
   cursor: pointer;
 }
+.link-focus-btn {
+  display: block;
+}
+
+.link-focus-btn:focus .close-btn {
+  fill: var(--accent-color);
+  color: #2196f3;
+}
 
 .close-btn {
   padding: 0px;
@@ -272,7 +281,8 @@ section {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-btn:hover {
+.close-btn:hover,
+.close-btn:focus {
   fill: var(--accent-color);
 }
 
@@ -291,7 +301,7 @@ section {
 
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding: 0px;
   margin-top: 0;
 }
 
@@ -306,8 +316,23 @@ section {
 .form-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
+}
+.form-field.textarea {
+  margin-bottom: 20px;
+}
+
+.form-field-btn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.checkbox-link {
+  text-decoration: underline;
+  color: var(--accent-color);
 }
 
 .form-checkbox {
@@ -320,6 +345,7 @@ section {
 .checkbox-label {
   display: flex;
   align-items: center;
+  padding: 0px 10px;
 }
 .form-input {
   margin: 0px;
@@ -750,11 +776,10 @@ textarea:focus {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.subsection {
+.container.footer {
   display: flex;
-  align-items: baseline;
 }
+
 .footer .link {
   color: rgba(255, 255, 255, 0.6);
 }
@@ -824,7 +849,7 @@ textarea:focus {
   width: 215px;
 }
 .footer-soc {
-  margin-left: 70px;
+  margin-left: auto;
 }
 .fotter-primary-text {
   display: block;
@@ -875,7 +900,7 @@ textarea:focus {
 }
 
 .subscribe {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .fotter-form {
