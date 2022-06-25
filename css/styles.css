@@ -143,7 +143,7 @@ section {
 .link-item {
   display: flex;
 }
-.link-item .link {
+.link-item .tell-link {
   padding: 32px 0px;
   display: flex;
   justify-content: center;
@@ -151,6 +151,16 @@ section {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.link-item .mail-link {
+  padding: 32px 0px;
+  display: flex;
+  justify-content: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .mail-icon {
   margin-right: 10px;
   transition-property: fill;
@@ -167,11 +177,18 @@ section {
 }
 
 .mail-icon:hover,
-.link .mail-icon:focus .link {
+.mail-link .mail-icon:focus .mail-link {
   fill: var(--accent-color);
   color: var(--accent-color);
 }
-.contacts-links .link {
+
+.mail-icon:hover,
+.tell-link .mail-icon:focus .tell-link {
+  fill: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.contacts-links .mail-link {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -179,8 +196,22 @@ section {
   align-items: center;
   justify-content: center;
 }
-.contacts-links .link:hover,
-.contacts-links .link:focus {
+
+.contacts-links .tell-link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.contacts-links .mail-link:hover,
+.contacts-links .mail-link:focus {
+  fill: var(--accent-color);
+  color: var(--accent-color);
+}
+.contacts-links .tell-link:hover,
+.contacts-links .tell-link:focus {
   fill: var(--accent-color);
   color: var(--accent-color);
 }
@@ -394,6 +425,14 @@ section {
 }
 
 .checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url(../img/form-icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+}
+
+.checkbox:focus + .checkbox-icon {
   background-color: var(--accent-color);
   background-image: url(../img/form-icon-check.svg);
   background-size: contain;
@@ -751,7 +790,7 @@ textarea:focus {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   outline: transparent;
-  transition-property: color, background-color;
+  transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -778,7 +817,7 @@ textarea:focus {
 }
 .container.footer {
   display: flex;
-  padding: 0;
+  padding: 0 15px;
 }
 
 .footer .link {
@@ -797,7 +836,7 @@ textarea:focus {
   font-style: normal;
   padding-left: 0px;
   margin: 0px;
-  transition-property: color, background-color;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1159,7 +1198,7 @@ textarea:focus {
   color: var(--white-color);
   letter-spacing: 0.03em;
   transform: translateY(101%);
-  transition-property: transform, background-color;
+  transition-property: transform, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
