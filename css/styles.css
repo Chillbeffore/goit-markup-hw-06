@@ -820,13 +820,13 @@ textarea:focus {
 }
 .link-mail {
   color: rgba(255, 255, 255, 0.6);
-  transition-property: color, background-color;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-tel {
   color: rgba(255, 255, 255, 0.6);
-  transition-property: color, background-color;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -838,7 +838,7 @@ textarea:focus {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--white-color);
-  transition-property: color, background-color;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
